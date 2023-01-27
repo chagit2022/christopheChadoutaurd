@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500&family=Michroma&family=Montserrat+Alternates&family=Nunito:wght@200;400&family=Outfit:wght@100&family=Prompt&family=Quicksand:wght@400;500;600&family=Raleway&family=Varela+Round&display=swap');
+/*family=Josefin  family=Michroma   family=Montserrat+Alternates    family=Nunito   family=Outfit  family=Prompt  family=Quicksand    family=Raleway */
 *,
 body,
 html {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: outfit;
+    font-family: Quicksand;
 
     --bleuAzure: #0a79c4;
+    --bleuAzureLight: #50b9ff;
     --bleuIAclair: #2eabb4;
     --bleuIAmedium: #2a819e;
     --bleuIAfonce: #0657a8;
@@ -18,11 +21,11 @@ html {
     --gradientBtnHover:linear-gradient(40deg, hsla(169, 85%, 43%, 1) 3%, hsla(212, 94%, 39%, 1) 70%);
     --gradientBtn:linear-gradient(70deg, hsla(212, 94%, 39%, 1) 24%, hsla(169, 85%, 43%, 1) 90%);
     --gradientIAlight:linear-gradient(70deg, hsla(212, 94%, 39%, 1) 24%, hsla(169, 85%, 43%, 1) 90%);
+    --gradientFeux: linear-gradient(47deg, hsla(0, 94%, 39%, 1) 2%, hsla(57, 85%, 43%, 1) 90%);
 }
 
 * {
     box-sizing: border-box;
-    font-family: "Work Sans";
     margin: 0;
     padding: 0;
 }
@@ -48,8 +51,8 @@ html {
     padding: 15px 20px;
 }
 .conteneur-haut header .logo a {
-    font-family: "Righteous";
-    font-size: 36px;
+
+    font-size: 40px;
     color: var(--fontTitreEtGras);
     text-decoration: none;
 }
@@ -64,6 +67,7 @@ html {
     padding: 3px;
     transition: 0.5s;
     text-decoration: none;
+    font-size: 18px;
 }
 .conteneur-haut header nav ul li a:hover {
     color: var(--fontTitreEtGras);
@@ -89,7 +93,6 @@ html {
 }
 .moi h2 {
     font-size: 48px;
-    font-family: "Righteous";
     text-align: center;
     padding: 50px 0;
 }
@@ -97,6 +100,7 @@ html {
     font: 18px;
     line-height: 22px;
     margin-bottom: 20px;
+    letter-spacing: 2px;
 }
 .moi .conteneurSection p span {
     color: var(--fontTitreEtGras);
@@ -112,7 +116,6 @@ html {
 }
 .moi .liste .col h3 {
     font-size: 28px;
-    font-family: "Righteous";
     margin-bottom: 25px;
 }
 .moi .liste .col ul {
@@ -128,7 +131,7 @@ html {
 }
 .moi .liste .col ul li span {
     background-color: var(--fontTitreEtGras);
-    padding: 3px;
+    padding: 5px 7px;
     font-weight: bold;
     border-radius: 5px;
 }
@@ -142,7 +145,7 @@ html {
     height: 100px;
     background: var(--gradientBtn);
     border-radius: 10px;
-    margin: 0 15px 15px 0;
+    margin:10px;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -172,10 +175,9 @@ html {
     width: fit-content;
     width: -moz-fit-content;
     display: block;
-    margin: 20px auto;
+    margin: 20px;
     padding: 10px 22px;
     font-size: 16px;
-    color: #fffff;
     position: relative;
     z-index: 10;
 }
@@ -211,7 +213,7 @@ html {
 /* conteneur Habilités */
 .skills {
     background-color: var(--BgGrisMarronfonce);
-    color: #fff;
+    color: var(--fontTitreEtGras);
     padding: 50px 20px;
 }
 .skills .conteneurSection {
@@ -221,10 +223,11 @@ html {
 /* titre Habilités */
 .skills h2 {
     font-size: 48px;
-    font-family: "Righteous";
+
     text-align: center;
     padding: 20px 0 40px;
     margin: -200px 0 80px 0;
+    color: #ffffff;
 }
 .skills .liste {
     display: flex;
@@ -232,36 +235,39 @@ html {
 .skills .liste .col {
     width: 50%;
     padding: 0 20px;
+    margin: 0 50px;
 }
 .skills .liste .col h3 {
     font-size: 28px;
-    font-family: "Righteous";
     margin-bottom: 25px;
 }
 .skills .skill > span {
     font-weight: bold;
     display: block;
     margin-bottom: 10px;
+    color: #fff;
 }
-.skills .skill .progress-bar {
-    height: 8px;
-    width: 80%;
-    background-color: #131517;
-    position: relative;
-    margin-bottom: 30px;
+.skills .skill{
+    margin: 5%;
+
 }
-.skills .skill .progress {
-    background-color: var(--fontTitreEtGras);
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 8px;
+.skills .skill .progress{
+    height: 9px;
+    width: 100%;
+    background: var(--BgGrisMarron);
+
 }
-.skills .skill .barra-skill span {
+
+.skills .skill .progress-bar{
+    background: var(--gradientIAlight);
+}
+
+
+.skills .skill .progress-bar span {
     position: absolute;
     height: 40px;
     width: 40px;
-    background-color: var(--fontTitreEtGras);
+    background: var(--fontTitreEtGras);
     border-radius: 50px;
     line-height: 40px;
     text-align: center;
@@ -281,7 +287,6 @@ html {
 }
 .curriculum h2 {
     font-size: 48px;
-    font-family: "Righteous";
     text-align: center;
     padding: 20px 0;
 }
@@ -295,7 +300,7 @@ html {
 }
 .curriculum .liste .col h3 {
     font-size: 28px;
-    font-family: "Righteous";
+
     margin-bottom: 25px;
 }
 .curriculum .liste .partieGauche {
@@ -386,7 +391,6 @@ html {
 }
 .portfolio h2 {
     font-size: 48px;
-    font-family: "Righteous";
     text-align: center;
     padding: 20px 0;
 }
@@ -401,21 +405,27 @@ html {
     height: fit-content;
     margin: 10px;
     cursor: pointer;
+
+
 }
 .portfolio .galerie .projet img {
     width: 100%;
     display: block;
+    border-radius: 14px;
 }
+
+.videoContent {
+    display: none;
+}
+
 .portfolio .galerie .projet .overlay {
     position: absolute;
+    border-radius: 12px;
     top: 0;
     width: 100%;
     height: 100%;
     text-align: center;
-    background: linear-gradient(
-        rgba(28, 182, 152, 0.8),
-        rgba(28, 182, 152, 0.8)
-    );
+    background: var(--gradientFeux);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -423,6 +433,7 @@ html {
     font-size: 18px;
     letter-spacing: 3px;
     opacity: 0;
+
 }
 .portfolio .galerie .projet .overlay h3 {
     margin-bottom: 20px;
@@ -434,6 +445,11 @@ html {
 .portfolio .galerie .projet .overlay:hover h3 {
     margin-bottom: 0px;
 }
+
+
+
+
+
 /* SECCION contact */
 .contact {
     background-color: var(--BgGrisMarronfonce);
@@ -455,7 +471,6 @@ html {
 
 .contact h2 {
     font-size: 48px;
-    font-family: "Righteous";
     text-align: center;
     padding: 20px 0;
 }
@@ -464,7 +479,7 @@ html {
 }
 .contact .col {
     width: 50%;
-    padding: 10px;
+    padding: 15px;
     position: relative;
 }
 .contact .col input,
@@ -637,8 +652,19 @@ footer .haut {
     }
     .contact .liste {
         display: block;
+        margin: 100px 20px;
     }
+
+    .contact .col {
+        margin:0 8%;
+    }
+
     .contact .liste .col {
         width: 100%;
+    }
+    .contact .col .info{
+        top: 100%;
+        margin: 4% 2%
+
     }
 }
