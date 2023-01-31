@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500&family=Michroma&family=Montserrat+Alternates&family=Nunito:wght@200;400&family=Outfit:wght@100&family=Prompt&family=Quicksand:wght@400;500;600&family=Raleway&family=Varela+Round&display=swap');
 /*family=Josefin  family=Michroma   family=Montserrat+Alternates    family=Nunito   family=Outfit  family=Prompt  family=Quicksand    family=Raleway */
+
+
 *,
 body,
 html {
@@ -389,6 +391,92 @@ html {
     max-width: 1100px;
     margin: auto;
 }
+/* partie Video...arghhh lol */
+/* btn play params*/
+.btn{
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: end;
+    align-items:flex-end;
+    flex-direction: column;
+    transition: 2s;
+}
+.btn p{
+    font-size: 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+}
+
+/* fond rond btn play */
+.btn .play{
+    position: relative;
+    width: 35px;
+    height: 35px;
+    margin: 20px 20px 0;
+    background: rgb(129, 76, 6);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 20px #26231e;
+
+}
+/* triangle play blanc faire un carre et supprimer les border(s) haut bas et droite*/
+.btn .play::before{
+    content: '';
+    position: absolute;
+    border: 12px solid #ffffff;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 0px solid transparent;
+    transform: translate(2px);
+
+}
+
+.btn.activ .play{
+    box-shadow: 0 0 150vh rgb(129, 76, 6);
+    transition: 2s;
+}
+.videoContent{
+   position: fixed;
+   top: 50%;
+   left:50%;
+   transform: translate(-50%,-50%);
+   width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: var(--gradientBtn);
+   z-index: 10;
+   visibility: hidden;
+
+}
+
+.videoContent video{
+    max-width: 700px;
+    outline: none;
+    position: relative;
+
+}
+
+.close{
+    position: absolute;
+    top: 100px;
+    right: 30px;
+    cursor: pointer;
+
+}
+
+@media (max-width: 901px) {
+    .videoContent video{
+        max-width: 90%;
+    }
+}
+
+/* params titre contenu et img */
 .portfolio h2 {
     font-size: 48px;
     text-align: center;
@@ -409,15 +497,12 @@ html {
 
 }
 .portfolio .galerie .projet img {
-    width: 100%;
+    width: 300px;
+    height: 160px;
+
     display: block;
     border-radius: 14px;
 }
-
-.videoContent {
-    display: none;
-}
-
 .portfolio .galerie .projet .overlay {
     position: absolute;
     border-radius: 12px;
@@ -436,8 +521,9 @@ html {
 
 }
 .portfolio .galerie .projet .overlay h3 {
-    margin-bottom: 20px;
-    transition: 1s;
+    font-size: ;
+    margin: 50px;
+    transition: 3s;
 }
 .portfolio .galerie .projet .overlay:hover {
     opacity: 1;
@@ -622,6 +708,7 @@ footer .haut {
 
     .skills .liste {
         display: block;
+
     }
     .skills .liste .col {
         width: 100%;
@@ -649,6 +736,8 @@ footer .haut {
     }
     .portfolio .galerie .projet img {
         width: 100%;
+        height: auto;
+        margin: 30px 0
     }
     .contact .liste {
         display: block;

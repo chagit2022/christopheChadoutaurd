@@ -1,30 +1,24 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-portafolio',
-  templateUrl: './portafolio.component.html',
-  styleUrls: ['./portafolio.component.css']
+    selector: 'app-portafolio',
+    templateUrl: './portafolio.component.html',
+    styleUrls: ['./portafolio.component.css'],
 })
 export class PortafolioComponent {
+    constructor() {
+        // const button = document.querySelector('#btn');
+        // const close = document.querySelector('#close');
+        // const videoContent = document.querySelector('#videoContent');
 
-    constructor(){
-        const btn = document.querySelector('btn');
-        const videoContent = document.querySelector('videoContent');
-        const close = document.querySelector('close');
+        // button.addEventListener('click', () => {
+        //     videoContent.style.visibility = 'visible';
+        //     videoContent.style.opacity = 1;
+        // });
 
-        btn?.addEventListener('click', () =>{
-            videoContent?.classList.add('show');
-        })
-
-        close?.addEventListener('click', () =>{
-            videoContent?.classList.add('show');
-        })
-
-
+        // close.addEventListener('click', () => {
+        //     videoContent.style.visibility = 'hidden';
+        //     videoContent.style.opacity = 0;
+        // });
     }
-
-
-
-
-
 }
