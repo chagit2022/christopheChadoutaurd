@@ -7,14 +7,23 @@ import { Component } from '@angular/core';
 })
 export class PortafolioComponent {
     constructor() {
-        // const button = document.querySelector('#btn');
-        // const close = document.querySelector('#close');
-        // const videoContent = document.querySelector('#videoContent');
+        const button: HTMLCollection = document.getElementsByClassName('btnPlay');
+        const close: HTMLCollection = document.getElementsByClassName('close');
+        const videoContent: HTMLCollection = document.getElementsByClassName('videoContent');
 
-        // button.addEventListener('click', () => {
-        //     videoContent.style.visibility = 'visible';
-        //     videoContent.style.opacity = 1;
-        // });
+
+        for (let i = 0; i < button.length; i++) {
+            button[i].addEventListener('click', () => {
+                (videoContent[i] as HTMLElement).style.visibility = 'visible';
+                // (videoContent[i] as HTMLElement).style.opacity = 1;
+            });
+        }
+
+        // for (let i = 0; i < button.length; i++){
+        //     button[i].addEventListener('click', () => {
+        //         console.log( videoContent[i]);
+        //     });
+        // }
 
         // close.addEventListener('click', () => {
         //     videoContent.style.visibility = 'hidden';
